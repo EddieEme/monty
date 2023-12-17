@@ -7,10 +7,16 @@
 */
 void add_element(stack_t **head, unsigned int line_number)
 {
-	stack_t *first;
-	stack_t *second;
+	stack_t *h;
+	int len = 0, aux;
 
-	if (!head || !(*head)->next)
+	h = *head;
+	while (h)
+	{
+		h = h->next;
+		len++;
+	}
+	if (len < 2)
 	{
 		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
 		fclose(bus.file);
@@ -18,9 +24,9 @@ void add_element(stack_t **head, unsigned int line_number)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	first = *head;
-	second = first->next;
-	first->n += second->n;
-	free(second);
-	*head = first->next;
+	h = *head;
+	aux = h->n + h->next->n;
+	h->next->n = aux;
+	*head = h->next;
+	free(h);
 }
