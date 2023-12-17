@@ -1,14 +1,15 @@
 #include "monty.h"
+
 /**
- * add_element - function that adds the top two elements of the stack.
- * @head: The head of stack
- * @line_number: number of line
- * Return: return nothing
-*/
+ * add_element - adds the top two elements of the stack.
+ * @head: pointer to the first node
+ * @line_number: line number
+ * Return: nothing
+ */
 void add_element(stack_t **head, unsigned int line_number)
 {
 	stack_t *h;
-	int len = 0, aux;
+	int res, len = 0;
 
 	h = *head;
 	while (h)
@@ -25,8 +26,8 @@ void add_element(stack_t **head, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	h = *head;
-	aux = h->n + h->next->n;
-	h->next->n = aux;
+	res = h->n + h->next->n;
+	h->next->n = res;
 	*head = h->next;
 	free(h);
 }

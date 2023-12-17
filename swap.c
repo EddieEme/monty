@@ -1,10 +1,11 @@
 #include "monty.h"
+
 /**
  * swap_element - swaps the top two elements of the stack.
- * @head: stack head
+ * @head: pointer to first node
  * @line_number: line_number
- * Return: no return
-*/
+ * Return: nothing
+ */
 void swap_element(stack_t **head, unsigned int line_number)
 {
 	stack_t *h;

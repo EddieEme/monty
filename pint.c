@@ -1,10 +1,11 @@
 #include "monty.h"
+
 /**
- * pint - function that prints the value at the top of the stack
- * @head: The stack head
+ * pint - prints the value at the top of the stack
+ * @head: pointer to the first node
  * @line_number: line_number
- * Return: return nothing
-*/
+ * Return: nothing
+ */
 void pint(stack_t **head, unsigned int line_number)
 {
 	if (*head == NULL)

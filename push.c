@@ -1,10 +1,11 @@
 #include "monty.h"
+
 /**
- * push_element -  funtion to pushes an element to the stack
- * @head: The head of a stack
- * @line_number: number of line
- * Return: return nothing
-*/
+ * push_element - pushes an element to the stack.
+ * @head: pointer to the first node
+ * @line_number: line number
+ * Return: nothing
+ */
 void push_element(stack_t **head, unsigned int line_number)
 {
 	int n, j = 0, flag = 0;
