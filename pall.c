@@ -1,6 +1,7 @@
 #include "monty.h"
 /**
- * pall - prints all the values on the stack, starting from the top of the stack
+ * pall - prints all the values on the stack,
+ *        starting from the top of the stack
  * @head: stack head
  * @line_number: not used
  * Return: return nothing
