@@ -63,7 +63,7 @@ void free_stack(stack_t *head);
 void pop(stack_t **head, unsigned int line_number);
 void swap_element(stack_t **head, unsigned int line_number);
 void add_element(stack_t **head, unsigned int line_number);
-void f_nop(stack_t **head, unsigned int counter);
+void nop(stack_t **head, unsigned int counter);
 void addnode(stack_t **head, int n);
 void addqueue(stack_t **head, int n);
 #endif

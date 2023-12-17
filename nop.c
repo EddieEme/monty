@@ -1,12 +1,13 @@
 #include "monty.h"
 /**
-  *f_nop- nothing
+  *nop - "no operation" meaning it doesn't
+  *        perform any action on the LIFO stack
   *@head: stack head
-  *@counter: line_number
+  *@line_number: line_number
   *Return: no return
  */
-void f_nop(stack_t **head, unsigned int counter)
+void nop(stack_t **head, unsigned int line_number)
 {
-	(void) counter;
+	(void) line_number;
 	(void) head;
 }
